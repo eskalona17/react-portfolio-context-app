@@ -1,7 +1,13 @@
 import "./intro.css"
 import Me from "../../img/me.png"
+import { ThemeContext } from "../../context";
+import { useContext } from "react";
 
 const Intro = () => {
+
+    const theme = useContext(ThemeContext)
+    const darkMode = theme.state.darkMode;
+
     return (
         <div className="i">
             <div className="i-left">
